@@ -1,7 +1,7 @@
 let urls = [
-    {u:"background-gallery.html",t: "Bilder als Hintergrund"},
     {u:"gallery.html",t: "Bilder im Dokument"},
     {u:"image-overlay.html",t: "Originalbilder finden"},
+    {u:"background-gallery.html",t: "Bilder als Hintergrund"},
     {u:"video.html",t: "Einfachere Videos"}
 ];
 
