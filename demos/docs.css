@@ -30,8 +30,25 @@ h3 {
     color: #666;
     font-size: 1.2em;
     flex: 0 0 100%;
-    margin: 0;
+    margin: .2em 0;
     font-weight: 400;
+}
+h3.positive {
+    color: green;
+}
+ol.positive li,ol.negative li {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 .2em;
+}
+ol.positive li::marker {
+    content: "😁"
+}
+ol.negative li::marker {
+    content: "😢"
+}
+h3.negative {
+    color: firebrick;
 }
 
 header,
