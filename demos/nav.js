@@ -1,8 +1,10 @@
 let urls = [
+    {u:"index.html",t: "Einleitung"},
     {u:"gallery.html",t: "Bilder im Dokument"},
     {u:"image-overlay.html",t: "Originalbilder finden"},
     {u:"background-gallery.html",t: "Bilder als Hintergrund"},
-    {u:"video.html",t: "Einfachere Videos"}
+    {u:"video.html",t: "Einfachere Videos"},
+    {u:"review.html",t: "Fazit"}
 ];
 
 let current = document.location.href.split('/').pop();
