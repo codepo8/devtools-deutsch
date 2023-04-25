@@ -1,0 +1,111 @@
+html {
+    padding: 0;
+    margin: 0;
+    line-height: 1.75;
+    font-size: 1em;
+    font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 5em 0 0 0;
+}
+h1 {
+    font-size: 2em;
+    font-weight: 400;
+    margin: 0;
+    border-bottom: 1px solid black;
+    color: olive
+}
+h2 {
+    color: darkolivegreen;
+    font-size: 1.8em;
+    font-weight: 400;
+    margin: 1em 0 1em 0;
+}
+h3 {
+    color: #666;
+    font-size: 1.2em;
+    flex: 0 0 100%;
+    margin: .2em 0;
+    font-weight: 400;
+}
+h3.positive {
+    color: green;
+}
+ol.positive li,ol.negative li {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 .2em;
+}
+ol.positive li::marker {
+    content: "😁"
+}
+ol.negative li::marker {
+    content: "😢"
+}
+h3.negative {
+    color: firebrick;
+}
+
+header, section {
+    width: 80vw;
+    margin: 0 auto;
+}
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #eee;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: center;
+}
+nav path {
+    fill: inherit;
+}
+nav ul {
+    font-size: .8em;
+    justify-content: center;
+    list-style: none;
+    margin: 1em 0 0 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+nav li {
+    flex: 1;
+    white-space: nowrap;
+}
+nav li a {
+    color: #369;
+    display: inline-block;
+}
+
+section {
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+section p {
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 1em;
+    flex: 2;
+    margin: 0;
+}
+section a {
+    color: #369;
+    display: block;
+}
+
+section ol {
+    flex: 1;
+    padding: 0 0 0 1em;
+    margin: 1em 0 0 0;
+}

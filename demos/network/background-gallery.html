@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bilder als Hintergrund</title>
-    <link rel="stylesheet" href="modes.css">
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="../assets/modes.css">
+    <link rel="stylesheet" href="../assets/layout.css">
     <style>
         #gallery {
             list-style: none;
@@ -88,13 +88,13 @@
     <nav><ul></ul></nav>
     <script>
         const gal = document.querySelector('#gallery');
-        let imgs = ['img/husky-cuddles-500px.jpg', 'img/socke-500px.jpg', 'img/larry-sleeping-500px.jpg', 'img/larry-ball-500px.jpg', 'img/husky-bed-500px.jpg', 'img/socke-looking-500px.jpg', 'img/larry-raincoat-500px.jpg', 'img/socke-with-ball-500px.jpg'];
+        let imgs = ['husky-cuddles-500px.jpg', 'socke-500px.jpg', 'larry-sleeping-500px.jpg', 'larry-ball-500px.jpg', 'husky-bed-500px.jpg', 'socke-looking-500px.jpg', 'larry-raincoat-500px.jpg', 'socke-with-ball-500px.jpg'];
         let out = '';
         imgs.forEach(img => {
-            out += `<li class="img" style="background-image:url(${img})"></li>`;
+            out += `<li class="img" style="background-image:url(../img/${img})"></li>`;
         })
         gal.innerHTML = out;
     </script>
-    <script src="nav.js"></script>
+    <script src="../assets/nav.js"></script>
 </body>
 </html>

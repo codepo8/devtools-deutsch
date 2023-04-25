@@ -1,7 +1,13 @@
+html {
+    padding: 0;
+    margin: 0;
+    line-height: 1.75;
+    font-size: 1em;
+    font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+}
 body {
     background: var(--background);
     color: var(--color);
-    font-family: helvetica, Arial, sans-serif;
     margin-top: 4em;
 }
 nav a {
@@ -34,8 +40,16 @@ nav li {
     flex: 1;
     white-space: nowrap;
 }
+nav li:last-of-type {
+    position: absolute;
+    left: 1em;
+    padding-top: .4em;
+}
 nav li a {
     display: inline-block;
+}
+nav path {
+    fill: var(--menulink);
 }
 footer {
     margin-top: 3em;
@@ -53,4 +67,8 @@ nav {
     background: var(--navbg);
     border-bottom: 1px solid var(--navborder);
     padding-bottom: 1em;
+}
+section {
+    max-width: 800px;
+    margin: 7em auto;   
 }

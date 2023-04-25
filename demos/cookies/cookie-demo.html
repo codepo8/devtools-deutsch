@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Demo</title>
+    <link rel="stylesheet" href="../assets/modes.css">
+    <link rel="stylesheet" href="../assets/layout.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: 30em;
+            margin: 6em auto;
+        }
+        form div {
+            display: flex;
+        }
+        label {
+            flex: 1;
+        }
+        input,button {
+            background: rgb(26, 75, 168);
+            color: white;
+            border: none;
+            font-family: inherit;
+            padding: .5em;
+        
+            flex: 3;
+        }
+        button {
+            background: green;
+            color: white;
+            cursor: pointer;
+        }
+        form::before{
+            content: '';
+            transform: rotate(180deg);
+            background: url(cookie.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: -300px;
+            left: calc(50% + 15em);
+            transition: 400ms;
+            opacity: 0.7;
+        }
+        .set form::before {
+            top: 0;
+            transition: 400ms;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <div>
+            <label for="cname">Cookie Name</label>
+            <input id="cname">
+        </div>
+        <div>
+            <label for="cvalue">Cookie Wert</label>
+        <input id="cvalue">
+        </div>
+        <button type="button" id="cset">Cookie setzen</button>
+        <div>
+            
+            <label for="ctname">Cookie Name</label>
+            <input id="ctname">
+        </div>
+        <button type="button" id="cread">Cookie lesen</button>
+        <output></output>
+    </form>
+    <nav><ul></ul></nav>
+    <script>
+        function nocookie() {
+            document.body.className = '';
+        }
+        document.querySelector('#cset').addEventListener('click', e => {
+            e.preventDefault();
+            let cname = document.querySelector('#cname').value;
+            let cvalue = document.querySelector('#cvalue').value;
+            if (cname !== '' && cvalue !== '') {
+                document.cookie = `${cname}=${cvalue}; SameSite=None; Secure`;
+                document.body.className = 'set';
+                window.setTimeout(nocookie,2000);
+            }
+        })
+        document.querySelector('#cread').addEventListener('click', e => {
+            e.preventDefault();
+            let cname = document.querySelector('#ctname').value;
+            document.cookie.split(';').forEach(cookie => {
+                let [name, value] = cookie.split('=');
+                if (name.trim() === cname) {
+                    document.querySelector('output').textContent = value;
+                }
+            })
+        })
+
+
+    </script>
+    <script src="../assets/nav.js"></script>
+</body>
+</html>

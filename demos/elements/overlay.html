@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser-Entwicklerwerkzeuge für Nicht-Entwickler - Elemente ändern</title>
+    <link rel="stylesheet" href="../assets/modes.css">
+    <link rel="stylesheet" href="../assets/layout.css">
+    <style>
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            backdrop-filter: blur(5px);
+            vertical-align: middle;
+            text-align: center;
+            Padding-top: 5em;
+        }
+        .overlay h1 {
+            border: none;
+            color: black;
+            font-size: 5em;
+            margin: .2em 1em;
+            -webkit-text-stroke: white 2px;
+        }
+        .overlay button {
+            border: 2px solid red;
+            background: yellow;
+            color: black;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1.5em;
+            margin: 0 1em;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Elemente Demo - Blockierte Seite</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non porro ullam iure, in adipisci consequuntur illum sint dicta deserunt, illo neque molestiae doloremque, tenetur ex quos laborum maxime obcaecati quisquam.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non porro ullam iure, in adipisci consequuntur illum sint dicta deserunt, illo neque molestiae doloremque, tenetur ex quos laborum maxime obcaecati quisquam.</p>
+        <h2>Mehr Inhalt!</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non porro ullam iure, in adipisci consequuntur illum sint dicta deserunt, illo neque molestiae doloremque, tenetur ex quos laborum maxime obcaecati quisquam.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non porro ullam iure, in adipisci consequuntur illum sint dicta deserunt, illo neque molestiae doloremque, tenetur ex quos laborum maxime obcaecati quisquam.</p>
+    </section>
+    <div class="overlay">
+        <h1>Erst bezahlen, dann lesen!</h1>
+        <button>Drei Monate umsonst, dann ne ganze Menge</button>
+    </div>
+    <nav><ul></ul></nav>
+    <script src="../assets/nav.js"></script>
+    <script>
+        document.querySelector('button').addEventListener('click', () => {
+            document.querySelector('.overlay').remove();
+        });
+    </script>
+</body>
+</html>
