@@ -21,7 +21,7 @@ let allurls = {
         {u:"style-changes.html",t: "Anzeige ändern"}
     ],
     "inspector": [
-        {u:"inspector-demo.html",t: "Information über Seitenelemente"},
+        {u:"inspector-demo.html",t: "Kurzinformationen"},
         {u:"context-menu-blocker.html",t: "Blockierter Rechts-Klick"},
         {u:"elements-without-space.html",t: "Seitenelemente ohne viel Piatz"}
     ],
