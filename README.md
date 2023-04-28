@@ -1,6 +1,6 @@
-# Browser Entwickler Tools für Nicht-Entwickler
+# Browser Entwickler Tools für Nicht-Entwickler:Innen
 
-Demoseiten für den "Browser Entwickler Tools für Nicht-Entwickler" Kurs auf LinkedIn Learning.
+Demoseiten für den "Browser Entwickler Tools für Nicht-Entwickler:Innen" Kurs auf LinkedIn Learning.
 
 Zum selbst ausprobieren:
 

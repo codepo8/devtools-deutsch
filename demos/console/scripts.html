@@ -70,6 +70,20 @@
     </style>
 </head>
 <body>
+    <details>
+        <summary>Scriptbeispiele</summary>
+        <ul>
+            <li>Alle Bilder: <button type="button">$$('img')</button></li>
+            <li>Adresse und Alternativtext von Bildern: <button>console.table($$('img'),['src', 'alt'])</button></li>
+            <li>Alle Bilder ohne Alternativtext: <button>$$('img').filter(i => i.alt === '').map(i => i.src)</button></li>
+            <li>Alle Links: <button type="button">$$('a')</button></li>
+            <li>Alle internen links: <button type="button">$$('a').filter(l => l.href.endsWith('#'))</button></li>
+            <li>Alle Bilder Links: <button type="button">$$('.full-link')</button></li>
+            <li>Alle Bilder URLs: <button type="button">$$('.full-link').map(i => i.href)</button></li>
+            <li>Alle Bilder URLs als Text: <button type="button">$$('.full-link').map(i => i.href).join("\n")</button></li>
+            <li>Alle Bilder URLs in die Zwischenablage <button type="button">copy($$('.full-link').map(i => i.href).join("\n"))</button></li>
+        </ul>
+    </details>
     <ul id="gallery">
         <li><a class="full-link" href="../img/larry-kitchen.jpg"><img src="../img/larry-kitchen-500px.jpg" loading="lazy" alt="Cocker Spaniel in Kitchen"></a></li>
         <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nostrum numquam sequi reiciendis iste illum officiis fuga corrupti dolores voluptatem et cupiditate unde, repudiandae commodi incidunt illo, saepe sunt repellat?</li>
@@ -95,7 +109,7 @@
         <li><a class="full-link" href="../img/larry-sleeping.jpg"><img src="../img/larry-sleeping-500px.jpg" loading="lazy" alt="Sleeping Cocker spaniel"></a></li>
         <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nostrum numquam sequi reiciendis iste illum officiis fuga corrupti dolores voluptatem et cupiditate unde, repudiandae commodi incidunt illo, saepe sunt repellat?</li>
         <li class="double">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nostrum numquam sequi reiciendis iste illum officiis fuga corrupti dolores voluptatem et cupiditate unde, repudiandae commodi incidunt illo, saepe sunt repellat?</li>
-        <li><a class="full-link" href="../img/larry-ball.jpg"><img src="../img/larry-ball-500px.jpg" loading="lazy" alt="Cocker Spaniel with ball"></a></li>
+        <li><a class="full-link" href="../img/larry-ball.jpg"><img src="../img/larry-ball-500px.jpg" loading="lazy"></a></li>
         <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nostrum numquam sequi reiciendis iste illum officiis fuga corrupti dolores voluptatem et cupiditate unde, repudiandae commodi incidunt illo, saepe sunt repellat?</li>
         <li class="ad">Hurra Werbung!</li>
         <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nostrum numquam sequi reiciendis iste illum officiis fuga corrupti dolores voluptatem et cupiditate unde, repudiandae commodi incidunt illo, saepe sunt repellat?</li>
@@ -106,10 +120,19 @@
         <li><a class="full-link" href="../img/larry-raincoat.jpg"><img src="../img/larry-raincoat-500px.jpg" loading="lazy" alt="Cocker Spaniel wearing Raincoat"></a></li>
         <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nostrum numquam sequi reiciendis iste illum officiis fuga corrupti dolores voluptatem et cupiditate unde, repudiandae commodi incidunt illo, saepe sunt repellat?</li>
         <li><a class="full-link" href="../img/socke-with-ball.jpg"><img src="../img/socke-with-ball-500px.jpg" loading="lazy" alt="Dog with ball"></a></li>
-        <li  class="ad">Noch eine Werbung</li>
+        <li class="ad">Noch eine Werbung</li>
         <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nostrum numquam sequi reiciendis iste illum officiis fuga corrupti dolores voluptatem et cupiditate unde, repudiandae commodi incidunt illo, saepe sunt repellat?</li>
     </ul>
     <nav><ul></ul></nav>
     <script src="../assets/nav.js"></script>
+    <script>
+        document.querySelector('body').addEventListener('click', e=>{
+            let t = e.target;
+            if (t.tagName == 'BUTTON') {
+                console.log(t.innerText);
+                navigator.clipboard.writeText(t.innerText);
+            }
+        })
+    </script>
 </body>
 </html>

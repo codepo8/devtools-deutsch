@@ -3,45 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browser-Entwicklerwerkzeuge für Nicht-Entwickler - Anzeige ändern</title>
+    <title>Browser-Entwicklerwerkzeuge für Nicht-Entwickler:Innen - Anzeige ändern</title>
     <link rel="stylesheet" href="../assets/modes.css">
     <link rel="stylesheet" href="../assets/layout.css">
     <style>
-        section {
-            display: flex;
-        }
-        section a {
+        h2 {
             color: green;
         }
-        section button {
-            width: 20em;
-        }
-        section img {
-            width: 20%;
-            aspect-ratio: 1;
-        }
-        .button, button {
-            font-size: 1em;
-            font-family: inherit;
-            border: 2px outset #69c;
-            background: #69c;
-            color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 20em;
+        .multicolumn {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            gap: 1em;
+        }
+        .multicolumn > div {
+            background: #eee;
+            border: 1px solid #ccc;
+            box-shadow: 5px 5px 10px #ccc;
+            padding: .5em 1em;
+            flex: 1;
+        }
+        .multicolumn > div:hover {
+            background: #ddd;
+            border: 1px solid #333;
+            transition: 400ms;
+        }
+        .multicolumn > div:nth-child(1) {
+            background: lightblue;
+            border-color: #000;
         }
     </style>
 </head>
 <body>
     <section>
         <h1>Elemente Demo - Anzeige ändern</h1>
-        <a href="https://linkedin.com">LinkedIn</a>
-        <button type="button">Zum Warenkorb</button>
-        <div class="button">Eventuell zum Warenkorb</div>
-        <img src="../img/larry-ball-500px.jpg" alt="Cocker Spaniel mit Ball">
+        <h2>Beispielüberschrift</h2>
+        <div class="multicolumn">
+            <div>
+                <h3>Erster Inhalt.</h3> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate pariatur tempore praesentium mollitia impedit illum, cumque recusandae! Facere et modi omnis nisi tenetur tempore aut veritatis nihil repellendus alias.</p>
+                </p>
+            </div>
+            <div>
+                <h3>Zweiter Inhalt.</h3> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate pariatur tempore praesentium mollitia impedit illum, cumque recusandae! Facere et modi omnis nisi tenetur tempore aut veritatis nihil repellendus alias.</p>
+                </p>
+            </div>
+            <div>
+                <h3>Dritter Inhalt.</h3> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate pariatur tempore praesentium mollitia impedit illum, cumque recusandae! Facere et modi omnis nisi tenetur tempore aut veritatis nihil repellendus alias.</p>
+                </p>
+            </div>
+        </div>
     </section>
     <nav><ul></ul></nav>
     <script src="../assets/nav.js"></script>

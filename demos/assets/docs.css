@@ -5,9 +5,9 @@ html {
     font-size: 1em;
     font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 }
-
 body {
     margin: 0;
+    font-size:.8em;
     padding: 5em 0 0 0;
 }
 

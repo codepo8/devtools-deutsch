@@ -7,7 +7,7 @@
     --navbg: #eee;
     --navborder: #666;
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --background: #111;
         --color:whitesmoke;
@@ -17,7 +17,7 @@
         --navbg: #222;
         --navborder: #ccc;
         }
-}
+} */
 @media print {
     body::before {
         content: 'Printing...';
