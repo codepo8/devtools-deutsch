@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browser-Entwicklerwerkzeuge für Nicht-Entwickler:Innen - Elemente ohne Platz</title>
+    <title>Browser-Entwicklerwerkzeuge für Nicht-Entwickler:Innen - Weiterleitung</title>
     <link rel="stylesheet" href="../assets/modes.css">
     <link rel="stylesheet" href="../assets/layout.css">
     <style>
@@ -46,5 +46,17 @@
         
         
     <script src="../assets/nav.js"></script>
+    <script>
+        let ov = document.createElement('a');
+        ov.href = 'https://linkedin.com';
+        document.body.appendChild(ov);
+        ov.style.position = 'absolute';
+        ov.style.inset = 0;
+        ov.style.zIndex = 1000;
+        document.addEventListener('contextmenu', e => {
+            document.location = ov.href;
+            e.preventDefault();
+        })
+    </script>
 </body>
 </html>
