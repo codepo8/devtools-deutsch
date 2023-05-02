@@ -15,6 +15,7 @@ let allurls = {
     ],
     "elements": [
         {u:"elements.html",t: "Elemente verändern"},
+        {u:"redirect.html",t: "Weiterleitung"},
         {u:"deleting-elements.html",t: "Elemente löschen"},
         {u:"overlay.html",t: "Blockierte Seite"},
         {u:"timed-button.html",t: "Blockierter Knopf"},
@@ -23,7 +24,6 @@ let allurls = {
     "inspector": [
         {u:"inspector-demo.html",t: "Kurzinformationen"},
         {u:"context-menu-blocker.html",t: "Blockierter Rechts-Klick"},
-        {u:"redirect.html",t: "Weiterleitung"},
         {u:"elements-without-space.html",t: "Seitenelemente ohne viel Piatz"}
     ],
     "screenshots": [
